@@ -108,7 +108,11 @@ echo "<br>";
 echo "Задача 6<br>";
 $a = 0;
 $b = 30;
-
+for($i=$a; $i<=$b; $i++) {
+    if (strpos($i , "3") !== false && ($i%5 == 0)) {
+        echo $i;
+    }
+}
 /*
 7**. Отсортировать массив по 'price' 
 $arr = [ 
@@ -136,3 +140,34 @@ $arr = [
 */
 echo "<br>";
 echo "Задача 7<br>";
+$arr = [ 
+    '1'=> [ 
+        'price' => 10, 
+        'count' => 2 
+        ], 
+    '2'=> [ 
+        'price' => 5, 
+        'count' => 5 
+        ], 
+    '3'=> [ 
+        'price' => 8, 
+        'count' => 5 
+        ], 
+    '4'=> [ 
+        'price' => 12, 
+        'count' => 4 
+        ], 
+    '5'=> [ 
+        'price' => 8, 
+        'count' => 4 
+        ], 
+];
+var_dump ($arr);
+
+foreach ($arr as $key => $row) {
+    $volume[$key]  = $row;
+}
+
+// Сортируем данные по volume по убыванию 
+array_multisort($volume, $arr);
+var_dump ($arr);
