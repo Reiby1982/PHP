@@ -171,3 +171,9 @@ echo "До Нового года осталось " . $ostatok . " дней!";
 */
 echo "<br>";
 echo "<p style='color: red'>Задача 10<p/>";
+function calculation ($number) {
+    for ($i = 1; $i <= $number; $i++) {
+    echo $number/$i . "<br>";
+}
+}
+calculation (5);
