@@ -165,24 +165,6 @@ $ostatok = ($ny_current - $date_calc) / 86400;
 echo "До Нового года осталось " . $ostatok . " дней!";
 
 
-$now = time();
-echo "<p style=\"color:#DC2629;\">$now</p>";
-$dr = mktime(0,0,0,04,12,2018);
-echo "<p style=\"color:#DC2629;\">$dr</p>";
-$skoko =  ($dr - $now);
-$minyt = ($skoko / 60);
-
-echo "Осталось минут до моего дня рождения $minyt<br>\n";
-
-$chasov = ($skoko / 3600);
-
-echo "Осталось часов $chasov<br>\n";
-
-$dney = ($skoko / 86400);
-
-echo "Осталось дней $dney<br>\n";
-
-
 /*
 Задача 10** 
 мы передаём число функции, которая в цикле for пытается поделить его на числа из диапазона 1..num и выводит результат
