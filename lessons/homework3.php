@@ -145,15 +145,43 @@ del_point ($str4);
 echo "<br>";
 echo "<p style='color: red'>Задача 9<p/>";
 
-$date_calc = "01.01.2007";
-echo $date_calc . "<br>";
-function ny_calc ($date_arg) {
-    // получаем текущую дату
-    // высчитываем дату Нового Года
-    // высчитываем дату до указанной даты
-}
+$date_calc = "30.12.2018";
+$date_calc = explode ( ".", $date_calc); 
+$day_calc = $date_calc[0];
+$month_calc = $date_calc[1];
+$year_calc = $date_calc[2];
+echo "Рассчетный день - " . $day_calc . "<br>" , "Рассчетный месяц - " . $month_calc . "<br>", "Рассчетный год - " . $year_calc . "<br>" ;
+$date_calc = mktime(0,0,0, $day_calc, $month_calc, $year_calc);
+echo "Рассчетное время - " .$date_calc;
+
 $date_current = date('d.m.Y'); // получаем текущую дату
-echo $date_current;
+$date_current = explode ( ".", $date_current);
+$year_current = $date_current[2];
+$month_current = 12;
+$day_current = 31;  
+$ny_current = mktime(0,0,0,$day_current,$month_current,$year_current);
+echo "$ny_current<br>";
+$ostatok = ($ny_current - $date_calc) / 86400;
+echo "До Нового года осталось " . $ostatok . " дней!";
+
+
+$now = time();
+echo "<p style=\"color:#DC2629;\">$now</p>";
+$dr = mktime(0,0,0,04,12,2018);
+echo "<p style=\"color:#DC2629;\">$dr</p>";
+$skoko =  ($dr - $now);
+$minyt = ($skoko / 60);
+
+echo "Осталось минут до моего дня рождения $minyt<br>\n";
+
+$chasov = ($skoko / 3600);
+
+echo "Осталось часов $chasov<br>\n";
+
+$dney = ($skoko / 86400);
+
+echo "Осталось дней $dney<br>\n";
+
 
 /*
 Задача 10** 
