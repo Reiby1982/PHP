@@ -49,7 +49,7 @@ class Home
     }
 }
 
-$home1 = new Home(2, 2, 3);
+$home1 = new Home(1, 2, 3);
 
 $home1->adress = "ул. Первая д.1";
 var_dump($home1);
@@ -60,3 +60,24 @@ $home2=new Home(5, 5, 4);
 $home2->adress = "ул. Вторая д.1";
 $home2->iformApartments ();
 $home2->showAdress();
+
+class Human
+{
+    public $name; 
+    public $wished_flor; 
+
+    function __construct($name,$wished_flor)
+    {
+        $this->name = $name;
+        $this->wished_flor = $wished_flor;
+    }
+}
+$queue = [
+    new Human('Света', 1),
+    new Human('Ваня', 1),
+    new Human('Женя', 1),
+    new Human('Катя', 1),
+    new Human('Петя', 1),
+    new Human('Гоша', 1)
+];
+var_dump($queue);
