@@ -41,25 +41,21 @@ $goods = [
     ],
 ];
 
-foreach ($goods as $good) {
-    var_dump($good); // ["Товар 1", "good1", "2300"]
+//foreach ($goods as $good) {
+//    var_dump($good); // ["Товар 1", "good1", "2300"]
 //    foreach ($good as $good_param) {
 //        var_dump($good_param);
 //    }
-}
+//}
 ?>
 <div>
     <div>
         <?php foreach ($goods as $good): ?>
         <div>
-<!--            <img src="--><?php //echo $good[1];?><!--" alt="--><?php //echo $good[0];?><!--">-->
             <img src="<?php echo $good['image'];?>" alt="<?php echo $good['title'];?>">
         </div>
         <p><?php echo $good['title'];?></p>
-<!--        <p>--><?php //echo $good[0];?><!--</p>-->
         <p><?php echo $good['price'];?></p>
-<!--        <p>--><?php //echo $good[2];?><!--</p>-->
-<!--        <button>Подробнее</button>-->
         <?php endforeach; ?>
     </div>
 </div>

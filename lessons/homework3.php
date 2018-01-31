@@ -77,6 +77,8 @@ function tag_del ($arg) {
 }
 
 tag_del($str);
+	$text = '<h1>Hello, world!</h1>';
+	echo strip_tags($text);
 /*
 Задача 5 
 Создайте массив. Объедините все элементы массива в строку и выведите её на экран. 
